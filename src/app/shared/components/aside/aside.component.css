@@ -1,0 +1,104 @@
+.custom-file-upload {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 20px;
+  width: 100px;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload i {
+
+  margin-right: 5px;
+}
+
+.custom-file-upload span {}
+
+
+.custom-file-upload {
+  border: 2px solid #3498db;
+  color: #3498db;
+  border-radius: 5px;
+  padding-left: 3px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+
+}
+
+.custom-file-upload:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.estaciones-section {
+  margin-top: 20px;
+}
+
+.estaciones-list {
+  list-style: none;
+  padding: 0;
+}
+
+.estacion-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.estacion-info {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.estacion-nombre {
+  font-size: 16px;
+  font-weight: bold;
+}
+.estacion-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.estacion-direccion {
+  color: #555;
+}
+
+.estacion-seleccionar {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.estacion-favoritos {
+  background-color: #bebb38;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.estacion-seleccionar:hover {
+  background-color: #2980b9;
+}
+
+.estaciones-list-container {
+  max-height: 200px;
+  /* Ajusta según tus necesidades */
+  overflow-y: auto;
+}
+.titulo{
+  margin-left: 20px;
+}

@@ -1,0 +1,83 @@
+<div class="wrap">
+    <section class="app-content">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="text-center">
+                    <h3 class="m-0 m-h-md">¡Lo más económico de España!</h3>
+                    <p class="m-b-lg">Consulta según tu tipo de combustible</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="text-center">Gasolina 95</h4>
+                <div *ngFor="let gasStation of estacionesGasolina95" class="box price-box">
+                    <div class="box-head text-center p-lg">
+                        <small class="text-muted">{{ gasStation.rotulo }}</small>
+                        <h4 class="box-title m-t-0">{{ gasStation.precio_gasolina95 }} <small class="text-muted fz-sm">euros/l</small></h4>
+                    </div>
+                    <div class="box-body text-center p-h-lg">
+                        <ul>
+                            <li><strong>Localidad:</strong> {{ gasStation.localidad }}</li>
+                            <li><strong>Municipio:</strong> {{ gasStation.municipio }}</li>
+                            <li><strong>Dirección:</strong> {{ gasStation.direccion }}</li>
+                            <!-- Agregar otras propiedades según sea necesario -->
+                        </ul>
+                    </div>
+                    <div class="box-footer p-lg">
+                        <a  class="btn btn-default rounded" role="button" (click)="agregarAFavoritos(gasStation)">Agregar a
+                            Favoritos</a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-center">Gasolina A</h4>
+                <div *ngFor="let gasStation of estacionesGasA" class="box price-box">
+                    <div class="box-head text-center p-lg">
+                        <small class="text-muted">{{ gasStation.rotulo }}</small>
+                        <h4 class="box-title m-t-0">{{ gasStation.precio_gasoleoA }} <small class="text-muted fz-sm">euros/l</small></h4>
+                    </div>
+                    <div class="box-body text-center p-h-lg">
+                        <ul>
+                            <li><strong>Localidad:</strong> {{ gasStation.localidad }}</li>
+                            <li><strong>Municipio:</strong> {{ gasStation.municipio }}</li>
+                            <li><strong>Dirección:</strong> {{ gasStation.direccion }}</li>
+                            <!-- Agregar otras propiedades según sea necesario -->
+                        </ul>
+                    </div>
+                    <div class="box-footer p-lg">
+                        <a  class="btn btn-default rounded" role="button" (click)="agregarAFavoritos(gasStation)">Agregar a
+                            Favoritos</a>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="text-center">Gasolina B</h4>
+                <div *ngFor="let gasStation of estacionesGasB" class="box price-box">
+                    <div class="box-head text-center p-lg">
+                        <small class="text-muted">{{ gasStation.rotulo }}</small>
+                        <h4 class="box-title m-t-0">{{ gasStation.precio_gasoleoB }} <small class="text-muted fz-sm">euros/l</small></h4>
+                    </div>
+                    <div class="box-body text-center p-h-lg">
+                        <ul>
+                            <li><strong>Localidad:</strong> {{ gasStation.localidad }}</li>
+                            <li><strong>Municipio:</strong> {{ gasStation.municipio }}</li>
+                            <li><strong>Dirección:</strong> {{ gasStation.direccion }}</li>
+                            <!-- Agregar otras propiedades según sea necesario -->
+                        </ul>
+                    </div>
+                    <div class="box-footer p-lg">
+                        <a  class="btn btn-default rounded" role="button" (click)="agregarAFavoritos(gasStation)">Agregar a
+                            Favoritos</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section><!-- .app-content -->
+</div><!-- .wrap -->

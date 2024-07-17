@@ -1,0 +1,16 @@
+<h1 *ngIf="!existenFavs()">No existen favoritos actualmente.</h1>
+<div *ngFor="let favorite of favoritos" class="favorite-item">
+
+    <h4>{{ favorite.rotulo }}</h4>
+    <p><strong>Dirección:</strong> {{ favorite.direccion }}</p>
+    <p><strong>Municipio:</strong> {{ favorite.municipio }}</p>
+
+    <!-- Agrega más propiedades según sea necesario -->
+    <button class="btn btn-primary" (click)="cambiarVerMas()">Ver precios</button>
+    <button class="btn btn-primary" (click)="eliminarFav(favorite.id_usuario,favorite.id_gasolinera)">Eliminar favorito</button>
+    <div *ngIf="verMas" class="more-details">
+        <p><strong>Precio Gasolina 95:</strong> {{ favorite.precio_gasolina95 }} euros/l</p>
+        <p><strong>Precio Gasoleo A:</strong> {{ favorite.precio_gasoleoA }} euros/l</p>
+        <p><strong>Precio Gasoleo B:</strong> {{ favorite.precio_gasoleoB }} euros/l</p>
+    </div>
+</div>

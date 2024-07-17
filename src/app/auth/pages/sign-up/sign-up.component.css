@@ -1,0 +1,63 @@
+.simple-page-form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: inline-block;
+    width: 48%;
+    /* Ajusta el ancho según tus necesidades */
+    margin-right: 2%;
+    /* Agrega margen entre los elementos */
+}
+
+.checkbox {
+    margin-top: 15px;
+    /* Ajusta el margen superior del checkbox */
+}
+
+.btn-primary {
+    display: block;
+    /* Hace que el botón ocupe todo el ancho disponible */
+    width: 100%;
+    /* Asegura que el botón ocupe todo el ancho disponible */
+    margin-top: 15px;
+    /* Ajusta el margen superior del botón */
+}
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 260px;
+    margin-top: 20px;
+    width: 100px;
+    height: 60px;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload i {
+
+    margin-right: 5px;
+}
+
+.custom-file-upload span {}
+
+
+.custom-file-upload {
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 5px;
+    padding-left: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+
+}
+
+.custom-file-upload:hover {
+    background-color: #3498db;
+    color: #fff;
+}

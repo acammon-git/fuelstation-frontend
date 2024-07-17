@@ -1,0 +1,34 @@
+[
+    {
+      "Nombre":  "Tiger Nixon",
+      "Posicion": "System Architect",
+      "Oficina": "Edinburgh",
+      "Edad": 61,
+      "FechaInicio": "2011/04/25",
+      "Salario": "$320,800"
+    },
+    {
+        "Nombre":  "Garrett Winters",
+        "Posicion": "Accountant",
+        "Oficina": "Tokyo",
+        "Edad": 63,
+        "FechaInicio": "2011/07/25",
+        "Salario": "$170,750"
+      },
+      {
+        "Nombre":  "Ashton Cox",
+        "Posicion": "Junior Technical Author",
+        "Oficina": "San Francisco",
+        "Edad": 66,
+        "FechaInicio": "2009/01/12",
+        "Salario": "$86,000"
+      },
+      {
+        "Nombre":  "Cedric Kelly",
+        "Posicion": "Senior Javascript Developer",
+        "Oficina": "Edinburgh",
+        "Edad": 22,
+        "FechaInicio": "2012/03/29",
+        "Salario": "$433,060"
+      }
+  ]

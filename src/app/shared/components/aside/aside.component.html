@@ -1,0 +1,86 @@
+<aside id="menubar" class="menubar light" style="padding-top: 35px;">
+    <div class="app-user">
+      <div class="media">
+        <div class="media-left">
+          <div class="avatar avatar-md avatar-circle">
+            <a (click)="mostrarOpcionCambiarFoto()">
+              <img class="img-responsive" [src]="foto()" alt="avatar" />
+            </a>
+            <div *ngIf="mostrarOpcionFoto">
+              <ul class="app-menu">
+          
+                <li>
+                  <label class="custom-file-upload">
+                    <input type="file" id="foto"  name="foto" (change)="onFileSelected($event)"/>
+                    <i class="menu-icon zmdi bi bi-camera zmdi-hc-lg"></i>
+                    <span class="menu-text">Cambiar foto</span>
+                  </label>
+                </li>
+      
+              </ul>
+            </div>
+          </div><!-- .avatar -->
+        </div>
+        <div class="media-body">
+          <div class="foldable">
+        <h5><a href="javascript:void(0)" class="username" >{{nombre()}}</a></h5>
+            <ul>
+              <li class="dropdown">
+                <a href="#" routerLink="/auth/edit" class="dropdown-toggle usertitle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <small>Editar mis datos</small>
+                  <span class="caret"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .media-body -->
+      </div><!-- .media -->
+    </div><!-- .app-user -->
+  
+    <div class="menubar-scroll">
+      <div class="menubar-scroll-inner">
+        <ul class="app-menu">
+          
+          <li *ngFor="let value of menuItems" routerLinkActive="active">
+            <!-- zmdi-search -->
+            <a [routerLink]="value.route">
+              <i class="menu-icon zmdi {{value.icon}} zmdi-hc-lg"></i>
+              <span class="menu-text">{{value.name}}</span>
+            </a>
+          </li>
+
+        </ul>
+        <h4 class="titulo">Estaciones Cercanas</h4>
+      <div class="estaciones-list-container">
+        <ul class="estaciones-list">
+          <li *ngFor="let estacion of estacionesCercanas" class="estacion-item">
+            <div class="estacion-info">
+              <span class="estacion-nombre">{{ estacion.rotulo }}</span>
+              <div class="estacion-buttons">
+                <a (click)="seleccionarEstacion(estacion)" class="estacion-seleccionar">
+                  Seleccionar
+                </a>
+                <a (click)="agregarAFavoritos(estacion)" class="estacion-favoritos">
+                  <i class="bi bi-star">Favoritos</i>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      <br>
+      <div *ngIf="distanciasCargadas!=''">
+      <h3>Distancia: {{distanciasCargadas}} km.</h3>
+    
+      </div>
+      <h4>Buscar gasolineras en...</h4>
+    <select class="form-control" *ngIf="municipios | async as municipiosArray" (change)="onMunicipioSeleccionado($event)">
+      <option value="" disabled selected>Selecciona un municipio</option>
+      <option *ngFor="let municipio of municipiosArray" [value]="municipio">{{ municipio }}</option>
+    </select>
+      </div><!-- .menubar-scroll-inner -->
+      
+    </div>
+    <!-- .menubar-scroll -->
+  </aside>

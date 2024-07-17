@@ -1,0 +1,25 @@
+<form class="login100-form" [formGroup]="myForm" (ngSubmit)="login()">
+    <div class="simple-page-wrap">
+      <div class="simple-page-form animated flipInY" id="login-form">
+        <h4 class="form-title m-b-xl text-center">Iniciar sesión</h4>
+  
+        <div class="form-group">
+          <input id="sign-in-email" type="email" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+  
+        <div class="form-group">
+          <input id="sign-in-password" type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+        </div>
+  
+        <div class="form-group m-b-xl">
+          <div class="checkbox checkbox-primary">
+            <input type="checkbox" id="keep_me_logged_in"/>
+            <label for="keep_me_logged_in">Recuerdame</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Acceder</button>
+        <emer-window *ngIf="loged"/>
+        
+      </div>
+    </div>
+  </form>
