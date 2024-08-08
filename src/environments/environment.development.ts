@@ -2,5 +2,5 @@ export const environment = {
     baseUrl:'http://localhost:3000',
     keyCryto:'miclave',
     production: true,
-    apiKey: 'pk.eyJ1Ijoia2xlcml0aCIsImEiOiJja3hramV2OWIwbjEwMzFwYzJlZWl6N2g5In0.iKXPpYvo7UPRiiZ-x_lCrw',
+    apiKey: 'pk.eyJ1IjoiYWJ1Y2hpaGExMiIsImEiOiJjbG8ya2t4dWIwMmd6MmtteW4wbmZsY2I2In0.jxBCli8jdN56wMiz7Zw25Q',
 };
